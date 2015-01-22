@@ -1,0 +1,3 @@
+[submodule "cmakeduino"]
+	path = cmakeduino
+	url = ../cmakeduino
