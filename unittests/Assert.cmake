@@ -3,15 +3,13 @@
 # ALL RIGHTS RESERVED.
 #----------------------------------------------------------------------------------------------------------------------
 # Asserts for checking whether two strings are equal (using STREQUAL).
-#
-# Input:
-#   actual: The actual string
-#   expected: The expected string
-#   msg: The message for this assertion
-#
-function(assert_strequal actual expected msg)
+function(assert_strequal
+    actual      # (input)  The actual string
+    expected    # (input)  The expected string
+    msg         # (input)  The message for this assertion
+)
     if (NOT (actual STREQUAL expected))
-        message(FATAL_ERROR "${msg}: Expected \"${expected}\" but actual \"${actual}\"")
+        message(FATAL_ERROR "${msg}: Expected \"${expected}\" but actually \"${actual}\"")
     endif()
 endfunction()
 #----------------------------------------------------------------------------------------------------------------------
